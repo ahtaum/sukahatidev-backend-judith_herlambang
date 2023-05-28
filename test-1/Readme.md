@@ -1,3 +1,4 @@
+
 ## Install
 
 - Clone this repository by typing it in the console or terminal
@@ -34,12 +35,12 @@ Overview :
 
 ### Customers
 
-**Get Customers**
+#### **Get Customers**
 Ambil semua Data Customer beserta relasinya :
 
     http://localhost:8080/api/users
 
-  **Get Customer**
+  #### **Get Customer**
  Ambil spesifik data customer berdasarkan id
  param :
  - id: integer
@@ -47,7 +48,7 @@ Ambil semua Data Customer beserta relasinya :
       http://localhost:8080/api/user/id
 
 
-**Add Customer**   
+####  **Add Customer**   
   tambah data customer :
   
    input type :
@@ -57,7 +58,7 @@ Ambil semua Data Customer beserta relasinya :
    
     http://localhost:8080/api/users/add
 
-**Update Customer**
+####  **Update Customer**
 
    update data customer dengan id
    
@@ -71,7 +72,7 @@ Ambil semua Data Customer beserta relasinya :
    
     http://localhost:8080/api/users/update/id
 
-**Delete Customer**
+####  **Delete Customer**
 param :
 - id : integer
 
@@ -80,12 +81,12 @@ http://localhost:8080/api/users/delete/2
 
 ### Products
 
-**Get Products**
+####  **Get Products**
 Ambil semua Data products beserta relasinya :
 
     http://localhost:8080/api/products
 
-  **Get Product**
+ ####  **Get Product**
  Ambil spesifik data products berdasarkan id
  param :
  - id: integer
@@ -93,7 +94,7 @@ Ambil semua Data products beserta relasinya :
       http://localhost:8080/api/products/id
 
 
-**Add Products**   
+####  **Add Products**   
   tambah data product :
   
    input type :
@@ -103,7 +104,7 @@ Ambil semua Data products beserta relasinya :
    
     http://localhost:8080/api/products/add
 
-**Update Product**
+####  **Update Product**
 
    update data product dengan id
    
@@ -117,7 +118,7 @@ Ambil semua Data products beserta relasinya :
    
     http://localhost:8080/api/products/update/id
 
-**Delete Product**
+####  **Delete Product**
 param :
 - id : integer
 
@@ -125,20 +126,21 @@ http://localhost:8080/api/products/delete/2
 
 ### Main
 
-**Get Orders**
+####  **Get Orders**
 ambil semua data pesanan
 
     http://localhost:8080/api/main/orders
   
-**Get Order**
+####  **Get Order**
 ambil data pesanan berdasarkan **id customer** jadi pastikan id customer nya benar
 
 params :
 - id: integer
 
     http://localhost:8080/api/main/orders/customer/id
+
  
-**Add Brand**
+####  **Add Brand**
 enpoint ini untuk menambahkan brand untuk kebutuhan customer atau pelanggan
 
 input :
@@ -151,7 +153,7 @@ note :
 
     http://localhost:8080/api/main/add/brand
 
-**Create Order**
+####  **Create Order**
 enpoint ini untuk memesan produk
 
 input :
@@ -164,10 +166,13 @@ note:
 
     http://localhost:8080/api/main/add/order
  
- **Cancel Order**
+ ####  **Cancel Order**
  cancel data yang di pesan, endpoint ini akan mendelete data order berdasarkan **id order**
 
 param:
 - id: integer
 
     http://localhost:8080/api/main/cancel/order/id
+
+
+
