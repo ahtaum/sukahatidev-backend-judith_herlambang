@@ -1,0 +1,54 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Customer {
+  id         Int       @id @default(autoincrement())
+  name       String
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  orders     Order[]
+
+  @@map("customers")
+}
+
+model Order {
+  id           Int       @id @default(autoincrement())
+  customer_id  Int
+  product_id   Int
+  location_id  Int
+  quantity     Int
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+  customer     Customer @relation(fields: [customer_id], references: [id])
+  product      Product  @relation(fields: [product_id], references: [id])
+  location     Location @relation(fields: [location_id], references: [id])
+
+  @@map("orders")
+}
+
+model Product {
+  id          Int       @id @default(autoincrement())
+  name        String
+  price       Float
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  orders      Order[]
+
+  @@map("products")
+}
+
+model Location {
+  id          Int       @id @default(autoincrement())
+  city_name   String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  orders      Order[]
+
+  @@map("locations")
+}
